@@ -81,13 +81,13 @@ Ce n’est qu’ensuite que la chaîne "true false" est complète et que println
 
 Colonne « Compile ? » : `oui` ou `non`. Colonne « Exécution » : `OK`, `exception` (en précisant laquelle), ou `-` si le code ne compile pas.
 
-| n° | Compile ? | Exécution | Justification |
-|----|-----------|-----------|---------------|
-| 1  |           |           |               |
-| 2  |           |           |               |
-| 3  |           |           |               |
-| 4  |           |           |               |
-| 5  |           |           |               |
-| 6  |           |           |               |
-| 7  |           |           |               |
-| 8  |           |           |               |
+| n° | Compile ? | Exécution | Pourquoi |
+|----|-----------|-----------|----------|
+| 1 | oui | OK | Upcast implicite : une `Moto` est un `Vehicule`. |
+| 2 | non | - | `a` est déclaré `Vehicule` : le downcast vers `Moto` exige un cast explicite. |
+| 3 | oui | OK | Cast légal, et l'objet référencé par `a` est bien une `Moto`. |
+| 4 | oui | exception (`ClassCastException`) | Cast `Object` vers `Moto` légal à la compilation, mais `b` référence un `Camion`. |
+| 5 | non | - | `Moto` et `Camion` sont des classes sœurs : cast « inconvertible ». |
+| 6 | oui | exception (`ClassCastException`) | Cast `Object` vers `String` légal à la compilation, mais `b` est un `Camion`. |
+| 7 | non | - | `b` est déclaré `Object`, qui n'a pas de méthode `type()`. |
+| 8 | oui | OK | `(Vehicule) b` réussit (un `Camion` est un `Vehicule`) ; `x8` vaut `"Vehicule"`. |
