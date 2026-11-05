@@ -1,0 +1,16 @@
+alexcvzz.vscode-sqlite
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+ms-python.vscode-python-envs
+ms-vscode.cmake-tools
+ms-vscode.cpp-devtools
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
+ms-vscode.makefile-tools
+pomdtr.excalidraw-editor
+redhat.vscode-xml
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+yy0931.vscode-sqlite3-editor
