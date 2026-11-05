@@ -91,3 +91,9 @@ Colonne « Compile ? » : `oui` ou `non`. Colonne « Exécution » : `OK`, `exce
 | 6 | oui | exception (`ClassCastException`) | Cast `Object` vers `String` légal à la compilation, mais `b` est un `Camion`. |
 | 7 | non | - | `b` est déclaré `Object`, qui n'a pas de méthode `type()`. |
 | 8 | oui | OK | `(Vehicule) b` réussit (un `Camion` est un `Vehicule`) ; `x8` vaut `"Vehicule"`. |
+
+Tarif de base écrit une seule fois (Q2) : seule Colis.tarif() contient la formule. ColisExpress et ColisFragile la réutilisent avec super.tarif().
+toString (Q3) : il est écrit une seule fois dans Colis, grâce à la liaison dynamique de sigle() et tarif(). ColisFragile ajoute seulement la fin avec super.toString().
+equals (Q4) : getClass() != o.getClass() est utilisé à la place de instanceof. Avec instanceof, un ColisFragile (qui est aussi un ColisStandard) pourrait être égal à un ColisStandard, ce que le sujet interdit. hashCode repose sur le seul code, donc deux objets égaux ont bien le même hash.
+compareTo (Q5) : pour obtenir un ordre décroissant, on inverse les arguments (autre en premier). Le code est comparé en dernier, en ordre croissant.
+Ordre des tests dans compterParType (Q6) : ColisFragile hérite de ColisStandard, donc instanceof ColisStandard serait vrai aussi pour un fragile. Il faut tester ColisFragile d’abord pour qu’un fragile ne compte pas comme standard. Le test o == null évite de compter les null dans « autres »
