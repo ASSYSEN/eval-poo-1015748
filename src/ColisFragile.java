@@ -6,7 +6,9 @@ public class ColisFragile extends ColisStandard {
         this.valeurDeclaree = valeurDeclaree;
     }
 
-    public long getValeurDeclaree() { return valeurDeclaree; }
+    public long getValeurDeclaree() { 
+        return valeurDeclaree; 
+        }
 
     @Override
     public long tarif() {

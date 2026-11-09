@@ -14,9 +14,15 @@ public abstract class Colis implements Comparable<Colis> {
         this.horsDakar = horsDakar;
     }
 
-    public String getCode() { return code; }
-    public int getPoids() { return poids; }
-    public boolean isHorsDakar() { return horsDakar; }
+    public String getCode() {
+         return code; 
+         }
+    public int getPoids() { 
+        return poids; 
+        }
+    public boolean isHorsDakar() { 
+        return horsDakar; 
+        }
 
     // Tarif de base : écrit une seule fois, réutilisé par les sous-classes via super
     public long tarif() {

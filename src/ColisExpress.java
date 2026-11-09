@@ -9,8 +9,12 @@ public class ColisExpress extends Colis {
     }
 
     @Override
-    public String sigle() { return "EXP"; }
+    public String sigle() { 
+        return "EXP"; 
+        }
 
     @Override
-    public int priorite() { return 3; }
+    public int priorite() { 
+        return 3; 
+        }
 }
